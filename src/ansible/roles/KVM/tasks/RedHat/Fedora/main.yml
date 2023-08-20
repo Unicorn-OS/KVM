@@ -9,7 +9,7 @@
 
 # Fix: https://github.com/ansible/ansible/issues/67187
 - name: Install all
-  ansible.builtin.shell: dnf group install --with-optional virtualization
+  ansible.builtin.shell: dnf group install --with-optional virtualization -y
   args:
     creates: somelog.txt
   become: true

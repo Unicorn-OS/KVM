@@ -1,6 +1,7 @@
 - hosts: localhost #, fedora, ubuntu
   vars:
     ansible_become_password: u
+    optional_packages: true
 
   roles:
   - KVM
