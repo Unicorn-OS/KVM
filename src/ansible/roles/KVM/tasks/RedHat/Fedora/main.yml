@@ -1,17 +1,10 @@
-- name: Install core
-  ansible.builtin.dnf:
-    name: "@virtualization"
-    state: present
-  become: true
-  when: not optional_packages
-  notify: start the libvirtd service
+- name: is Silverblue?
+  shell: which rpm-ostree
+  register: which
+  failed_when: false
 
+- include_tasks: Silverblue/main.yml
+  when: which.rc == 0
 
-# Fix: https://github.com/ansible/ansible/issues/67187
-- name: Install all
-  ansible.builtin.shell: dnf group install --with-optional virtualization -y
-  args:
-    creates: somelog.txt
-  become: true
-  when: optional_packages
-  notify: start the libvirtd service
+- include_tasks: Workstation/main.yml
+  when: not which.rc == 0

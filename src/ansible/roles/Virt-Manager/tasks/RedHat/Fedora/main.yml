@@ -1,2 +1,10 @@
-- debug:
-    msg: ToDo
+- name: is Silverblue?
+  shell: which rpm-ostree
+  register: which
+  failed_when: false
+
+- include_tasks: Silverblue/main.yml
+  when: which.rc == 0
+
+- include_tasks: Workstation/main.yml
+  when: not which.rc == 0
