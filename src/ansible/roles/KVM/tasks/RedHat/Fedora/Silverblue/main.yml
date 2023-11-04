@@ -8,5 +8,14 @@
   - libvirt
   notify:
   - Reboot
-  - start the libvirtd service
+  become: true
+
+- name: Has to reboot to see libvirtd!
+  meta: flush_handlers
+
+- name: start the libvirtd service
+  ansible.builtin.systemd:
+    name: libvirtd
+    state: started
+    enabled: true
   become: true
