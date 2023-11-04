@@ -4,3 +4,7 @@
     state: started
     enabled: true
   become: true
+
+- name: Reboot
+  ansible.builtin.reboot:
+  when: not ansible_connection == 'local'
