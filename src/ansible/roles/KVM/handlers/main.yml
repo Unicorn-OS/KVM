@@ -5,6 +5,13 @@
     enabled: true
   become: true
 
-- name: Reboot
+- name: Reboot node
   ansible.builtin.reboot:
   when: not ansible_connection == 'local'
+  become: true
+
+- name: Reboot
+  debug:
+    msg: "{{'You must reboot manually! As you are setting up localhost' if ansible_connection == 'local' else 'Rebooting ...' }}"
+  changed_when: true
+  notify: Reboot node
