@@ -1,7 +1,6 @@
 - name: install KVM & Virt-Manager
-  hosts: localhost #, node #, fedora, ubuntu
+  hosts: localhost #, test, node
   vars:
-    ansible_become_password: u
     optional_packages: true
 
   roles:
