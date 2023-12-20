@@ -4,5 +4,5 @@
     optional_packages: true
 
   roles:
+    - Virt-Manager  # run first for only one reboot on os: Silverblue
     - KVM
-    - Virt-Manager

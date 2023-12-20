@@ -7,3 +7,4 @@
   notify:
   - Reboot
   become: true
+  when: virt_manager
