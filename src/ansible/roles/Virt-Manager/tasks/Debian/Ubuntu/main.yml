@@ -1,5 +1,0 @@
-- name: Install
-  ansible.builtin.apt:
-    pkg:
-    - virt-manager
-  become: true

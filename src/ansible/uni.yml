@@ -4,5 +4,5 @@
     optional_packages: true
 
   roles:
-    - Virt-Manager
-    - KVM
+    - UniInc.KVM
+    - UniInc.VirtManager
