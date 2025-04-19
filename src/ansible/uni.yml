@@ -1,9 +1,9 @@
 - name: install KVM & Virt-Manager
-  hosts: node # localhost #, node
+  hosts: localhost #, node
   vars:
     optional_packages: true
 
   roles:
-  - ansible-role-KVM  #Dev
-    # - UniInc.KVM
-    # - UniInc.VirtManager
+  # - ansible-role-KVM  #Dev
+  - UniInc.KVM
+  # - UniInc.VirtManager
