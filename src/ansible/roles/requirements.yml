@@ -1,5 +1,5 @@
 ---
 roles:
 - UniInc.KVM
-- UniInc.VirtManager
+- UniInc.Virt-Manager
 - UniInc.Psutil
