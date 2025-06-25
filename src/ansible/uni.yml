@@ -6,5 +6,6 @@
   roles:
   - dev/ansible-role-KVM
   - dev/ansible-role-Virt-Manager
+  - dev/ansible-role-Libvirt-Network-start-On-Boot
 #  - UniInc.KVM
 #  - UniInc.Virt-Manager
