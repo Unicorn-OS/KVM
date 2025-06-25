@@ -4,8 +4,8 @@
     optional_packages: true
 
   roles:
-#  - dev/ansible-role-KVM
-#  - dev/ansible-role-Virt-Manager
+  - dev/ansible-role-KVM
+  - dev/ansible-role-Virt-Manager
   - dev/ansible-role-Libvirt-Network-startOnBoot
 #  - UniInc.KVM
 #  - UniInc.Virt-Manager
